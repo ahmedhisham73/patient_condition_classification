@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drug Review Prediction</title>
+</head>
+<body>
+    <h1>Enter a drug review</h1>
+    <form action="/predict" method="POST">
+        <textarea name="review" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Predicted Condition: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
+
